@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>jQuery UI Form Widgets</title>
+
+    <!-- Font Awesome dependency -->
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
+    <!-- jQuery dependency -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- Avine Form css -->
+    <link rel="stylesheet" href="../src/css/avnForm.css" />
+    <!-- Avine Form js -->
+    <script src="../src/js/avnPlugin.js"></script>
+    <script src="../src/js/avnForm.js"></script>
+    <script src="../src/js/avnFormButtonGroup.js"></script>
+    <script src="../src/js/avnFormTreeView.js"></script>
+
+    <!-- Avine Demo helper -->
+    <link rel="stylesheet" href="helper/helper.css" />
+    <script src="helper/helper.js"></script>
+</head>
+<body>
+    
+<style>
+    #demo-message { margin-bottom: 1em; min-height: 1.5em; font-family: Consolas, monospace; font-size: 1.2em; color: green; }
+</style>
+
+<div class="demo-code-sample">
+    <h1>jQuery plugin "button-group" - Builder</h1>
+    <div id="demo-form-actions"></div><hr />
+
+    <form method="GET" action="#" class="avn-form">
+
+        <div id="demo-message"></div>
+        <div id="demo-content"></div>
+
+    </form>
+</div>
+
+<script>
+    var addAction = window.demoFormActions();
+
+    var settings = {
+        data: [
+            { label: 'Item 1', value: 1 },
+            { label: 'Item 2 with a long text', value: 2, checked: false },
+            { label: 'Item 3', value: 3, checked: true },
+        ],
+        type: 'checkbox',
+        vertical: false,
+        fullWidth: false,
+        fixedWidth: false,
+        uncheckRadio: false
+    };
+
+    addAction('checkbox', function () {
+        $(this).text(settings.type = 'checkbox' == settings.type ? 'radio' : 'checkbox');
+        demoEnableJs();
+    });
+
+    ['vertical', 'fullWidth', 'fixedWidth', 'uncheckRadio'].forEach(function (option) {
+        addAction(option + ' N', function () {
+            settings[option] = !settings[option];
+            $(this).text(option + (settings[option] ? ' Y' : ' N'));
+            demoEnableJs();
+        });
+    });
+
+    var selectBy = ['select by value', 'select by label'], matchLabel = 0;
+    addAction(selectBy[matchLabel], function () {
+        matchLabel = matchLabel ? 0 : 1;
+        $(this).text(selectBy[matchLabel]);
+    });
+    addAction('select first item', function () {
+        $('.avn-form-button-group').avnButtonGroup('setSelection', [matchLabel ? 'Item 1' : 1], matchLabel);
+    });
+
+    var $message = $('#demo-message'), $demo = $('#demo-content').change(function (e) {
+        var $group = $(e.target).closest('.avn-form-button-group');
+        $message.html(
+            JSON.stringify($group.avnButtonGroup('getSelection'))
+        );
+    });
+    function demoEnableJs() {
+        $message.empty();
+        $demo.empty();
+        var $div = $('<div>').appendTo($demo);
+        $div.avnButtonGroup(settings);
+    }
+    demoEnableJs();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+/* form-button-group */
+
+.avn-form .avn-form-button-group {
+	margin: 0 0 @form-margin 0;
+
+    input {
+        display: none; // Comment this line to view the input tag
+    }
+    label {
+        margin: 0;
+        padding: @form-padding-v @form-padding-h;
+		border-style: solid;
+		border-color: @form-border-color;
+        background-color: @form-bg-color;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+	// horizontal (default)
+
+	label, &.avn-form-button-group-h label {
+		border-radius: 0;
+		border-width: @border-width;
+		border-right-width: 0;
+		&:first-child {
+			border-top-left-radius: @border-radius-xs;
+			border-bottom-left-radius: @border-radius-xs;
+		}
+		&:last-child {
+			border-top-right-radius: @border-radius-xs;
+			border-bottom-right-radius: @border-radius-xs;
+			border-right-width: @border-width;
+		}
+	}
+
+    // horizontal full width
+
+    &.avn-form-button-group-h-full {
+        width: 100%;
+        display: table;
+        border-collapse: separate;
+        &.avn-form-button-group-h-fixed {
+            table-layout: fixed;
+        }
+        > label {
+            display: table-cell;
+        }
+    }
+
+	// vertical
+
+    &.avn-form-button-group-v label {
+        width: 100%;
+		border-radius: 0;
+		border-width: @border-width;
+        border-bottom-width: 0;
+	    &:first-child {
+	    	border-top-left-radius: @border-radius-xs;
+	    	border-top-right-radius: @border-radius-xs;
+	    }
+	    &:last-child {
+	    	border-bottom-left-radius: @border-radius-xs;
+	    	border-bottom-right-radius: @border-radius-xs;
+	        border-bottom-width: @border-width;
+	    }
+    }
+
+	// hover and active
+
+    label {
+        transition: 
+            box-shadow @form-transition ease,
+            border-color @form-transition ease,
+            background-color @form-transition ease,
+            color @form-transition ease;
+    	&:hover {
+            box-shadow: -1px -1px 2px darken(@color-pale, 5%) inset;
+    		background-color: @color-pale;
+    	}
+    	&.avn-form-button-group-active {
+    		box-shadow: 0px 0px 3px darken(@color-base, 5%) inset;
+	        border-color: lighten(@color-base, 8%);
+            background-color: @color-base;
+	        color: @color-pale;
+	    }
+        &.avn-form-button-group-disabled {
+            box-shadow: 1px 1px 2px rgba(0,0,0,.05) inset;
+            background-color: darken(@form-bg-color, 5%);
+            color: @form-color-disabled;
+            font-style: italic;
+            cursor: default;
+        }
+    }
+
+    > br {
+        display: none;
+    }
+}

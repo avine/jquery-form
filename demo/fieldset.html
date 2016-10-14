@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>jQuery UI Form Widgets</title>
+
+    <!-- Font Awesome dependency -->
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
+    <!-- jQuery dependency -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- Avine Form css -->
+    <link rel="stylesheet" href="../src/css/avnForm.css" />
+    <!-- Avine Form js -->
+    <script src="../src/js/avnPlugin.js"></script>
+    <script src="../src/js/avnForm.js"></script>
+    <script src="../src/js/avnFormButtonGroup.js"></script>
+    <script src="../src/js/avnFormTreeView.js"></script>
+
+    <!-- Avine Demo helper -->
+    <link rel="stylesheet" href="helper/helper.css" />
+    <script src="helper/helper.js"></script>
+</head>
+<body>
+
+<div class="demo-code-sample">
+    <h1>Fieldset</h1>
+    <p>Utilisation des balises <code>fieldset</code> et <code>legend</code> ainsi que des classes CSS <code>.avn-form-group-*</code>.</p>
+    <div id="demo-form-actions"></div><hr />
+
+    <form method="GET" action="#" class="avn-form">
+
+        <fieldset>
+            <legend>Block form-group</legend>
+
+            <div class="avn-form-group-title">Group 1:</div>
+            <div class="avn-form-group-content">
+                <label class="avn-form-nested-inverted"><input type="checkbox" checked="checked" />Checkbox 1</label>
+                <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 2</label>
+                <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 3</label>
+            </div>
+
+            <div class="avn-form-group-title">Group 2:</div>
+            <div class="avn-form-group-content">
+                <label>Text 1<input type="text" /></label>
+                <label>Text 2<input type="text" /></label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Block form-group with &lt;br /&gt;</legend>
+
+            <div class="avn-form-group-title">Group 1:</div>
+            <div class="avn-form-group-content">
+                <label class="avn-form-nested-inverted"><input type="checkbox" checked="checked" />Checkbox 1</label><br />
+                <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 2</label><br />
+                <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 3</label>
+            </div>
+
+            <div class="avn-form-group-title">Group 2:</div>
+            <div class="avn-form-group-content">
+                <label>Text 1<input type="text" /></label><br />
+                <label>Text 2<input type="text" /></label>
+
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Inline form-group</legend>
+
+            <div class="avn-form-group-title">Group 1:</div>
+            <div class="avn-form-group-content avn-form-group-inline">
+                <label class="avn-form-nested-inverted"><input type="checkbox" checked="checked" />Checkbox 1</label>
+                <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 2</label>
+                <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 3</label>
+            </div>
+
+            <br />
+
+            <div class="avn-form-group-title">Group 2:</div>
+            <div class="avn-form-group-content avn-form-group-inline">
+                <label>Text 1<input type="text" /></label>
+                <label>Text 2<input type="text" /></label>
+            </div>
+        </fieldset>
+
+    </form>
+
+</div>
+
+<script>window.demoFormActions();</script>
+
+</body>
+</html>

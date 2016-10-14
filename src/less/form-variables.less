@@ -1,0 +1,40 @@
+
+// font
+
+@font-family: Helvetica, Arial, sans-serif;
+
+// color
+
+@color-default: #555;
+@color-x: 12%; // Delta of a value (of a color in the HSL color space)
+@color-l-max: 93%; // Max value of the lightness (of a color in the HSL color space) for pastel colors
+
+@color-base: hsl(195, 98%, 48%);
+@color-base-darker: darken(desaturate(@color-base, @color-x), @color-x);
+@color-pale: hsl(hue(@color-base), saturation(@color-base) - @color-x, @color-l-max);
+@color-pale-darker: desaturate(darken(@color-pale, @color-x), @color-x);
+
+// border
+
+@border-width: 1px; // (Tip: You should care about: @border-width <= @border-radius-xs)
+@border-radius-xs: 3px; // x-small
+@border-radius-sm: 5px; // small
+@border-radius-md: 8px; // medium
+
+// form
+
+@form-margin: 10px;
+@form-padding-v: .25em;
+@form-padding-h: .5em;
+@form-line-height: 1.5em;
+@form-border-color: rgba(0,0,0, .15); // #d5d5d5;
+@form-bg-color: #fafafa;
+@form-bg-color-active: #fff;
+@form-color-disabled: #bbb;
+@form-transition: .15s;
+
+@form-tree-view-shift: 1.75em;
+@form-tree-view-delta: 2px;
+
+@form-tree-view-drop-down-max-height: 410px;
+@form-tree-view-drop-down-delay: .25s;

@@ -1,0 +1,29 @@
+
+html, body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+a, a:visited {
+    text-decoration: underline;
+    color: #337ab7;
+}
+a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+hr {
+    margin: 1.5em 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.demo-code-sample {
+    margin: 2em auto;
+    max-width: 960px;
+}
+
+#demo-form-actions > * {
+    margin: .5em;
+}
