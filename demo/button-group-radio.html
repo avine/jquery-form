@@ -25,17 +25,13 @@
 </head>
 <body>
 
-<style>
-    #demo-get-selection { min-height: 1.5em; font-family: Consolas, monospace; font-size: 1.2em; color: green; }
-</style>
-
 <div class="demo-code-sample">
     <h1>jQuery plugin "button-group" - type "radio"</h1>
-    <div id="demo-form-actions"></div><hr />
+    <div id="demo-form-actions"></div>
 
     <form method="GET" action="#" class="avn-form">
 
-        <div id="demo-get-selection"></div>
+        <div id="demo-message"></div>
 
         <h3>Horizontal</h3>
         <div id="demo1"></div>
@@ -89,7 +85,7 @@
 
     $('body').change(function (e) {
         var $group = $(e.target).closest('.avn-form-button-group');
-        $('#demo-get-selection').html(
+        $('#demo-message').html(
             '<b>' + $group.attr('id') + ' :</b> ' +
             JSON.stringify($group.avnButtonGroup('getSelection'))
         );

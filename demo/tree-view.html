@@ -27,7 +27,7 @@
 
 <div class="demo-code-sample">
     <h1>Form "tree-view"</h1>
-    <div id="demo-form-actions"></div><hr />
+    <div id="demo-form-actions"></div>
 
     <form method="GET" action="#" class="avn-form">
 
@@ -93,17 +93,19 @@
         addAction('Drop down N', function () {
             dropDown = !dropDown;
             $(this).text(dropDown ? 'Drop down Y' : 'Drop down N');
+            demoEnableJs();
         });
 
         var threeStates = false;
         addAction('Three states N', function () {
             threeStates = !threeStates;
             $(this).text(threeStates ? 'Three states Y' : 'Three states N');
+            demoEnableJs();
         });
 
         // Store as template
         var tmpl = $('.avn-form').html();
-        addAction('avnTreeView', function () {
+        function demoEnableJs() {
 
             $('.avn-form').html(tmpl); // Refresh DOM
 
@@ -139,8 +141,8 @@
 
             $('#demo3').avnTreeView({ uncheckRadio: true, dropDown: dropDown, threeStates: threeStates });
             $('#demo4').avnTreeView({ uncheckButton: true, dropDown: dropDown, threeStates: threeStates });
-        });
-
+        }
+        demoEnableJs();
     });
 </script>
 

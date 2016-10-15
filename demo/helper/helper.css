@@ -13,6 +13,21 @@ a:hover, a:active, a:focus {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul {
+    line-height: 1.5em;
+}
+
+h2 {
+    border-bottom: 1px solid #ddd;
+}
+
+code {
+    padding: 0 .25em;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
+
 hr {
     margin: 1.5em 0;
     border: none;
@@ -21,9 +36,30 @@ hr {
 
 .demo-code-sample {
     margin: 2em auto;
+    padding: 0 2em;
     max-width: 960px;
+}
+
+.demo-font-bigger {
+    font-size: 1.2em;
+}
+
+#demo-form-actions {
+    margin: 2em 0;
+    padding: .5em;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #eee;
 }
 
 #demo-form-actions > * {
     margin: .5em;
+}
+
+#demo-message {
+    margin: 1em 0;
+    min-height: 1.5em;
+    font-family: monospace;
+    font-size: 1em;
+    color: green;
 }
