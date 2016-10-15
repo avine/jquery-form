@@ -8,7 +8,7 @@ Replace a list of radio (or checkbox) buttons by an full featured button group o
 
 ```html
 <div id="demo-button-group">
-  <label>Item 1 <input type="radio" checked /></label>
+  <label>Item 1<input type="radio" checked /></label>
   <label>Item 2<input type="radio" /></label>
   <label>Item 3<input type="radio" /></label>
   <label>Item 4<input type="radio" disabled /></label>
