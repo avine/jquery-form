@@ -1,149 +1,149 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>jQuery UI Form Widgets</title>
+  <title>jQuery UI Form Widgets</title>
 
-    <!-- Font Awesome dependency -->
-    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
-    <!-- jQuery dependency -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Font Awesome dependency -->
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
+  <!-- jQuery dependency -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Avine Form css -->
-    <link rel="stylesheet" href="../src/css/avnForm.css" />
-    <!-- Avine Form js -->
-    <script src="../src/js/avnPlugin.js"></script>
-    <script src="../src/js/avnForm.js"></script>
-    <script src="../src/js/avnFormButtonGroup.js"></script>
-    <script src="../src/js/avnFormTreeView.js"></script>
+  <!-- Avine Form css -->
+  <link rel="stylesheet" href="../src/css/avnForm.css" />
+  <!-- Avine Form js -->
+  <script src="../src/js/avnPlugin.js"></script>
+  <script src="../src/js/avnForm.js"></script>
+  <script src="../src/js/avnFormButtonGroup.js"></script>
+  <script src="../src/js/avnFormTreeView.js"></script>
 
-    <!-- Avine Demo helper -->
-    <link rel="stylesheet" href="helper/helper.css" />
-    <script src="helper/helper.js"></script>
+  <!-- Avine Demo helper -->
+  <link rel="stylesheet" href="helper/helper.css" />
+  <script src="helper/helper.js"></script>
 </head>
 <body>
 
 <div class="demo-code-sample">
-    <h1>Form "tree-view"</h1>
-    <div id="demo-form-actions"></div>
+  <h1>Form "tree-view"</h1>
+  <div id="demo-form-actions"></div>
 
-    <form method="GET" action="#" class="avn-form">
+  <form method="GET" action="#" class="avn-form">
 
-        <h3>Checkbox (from data)</h3>
-        <div id="demo1"><i>(lazy loading)</i></div>
+    <h3>Checkbox (from data)</h3>
+    <div id="demo1"><i>(lazy loading)</i></div>
 
-        <h3>Radio (from data)</h3>
-        <div id="demo2"><i>(lazy loading)</i></div>
+    <h3>Radio (from data)</h3>
+    <div id="demo2"><i>(lazy loading)</i></div>
 
-        <h3>Radio with uncheck enabled (from DOM)</h3>
-        <div id="demo3">
-            <ul>
-                <li>
-                    <label>Product 1<input type="radio" name="demo2-name" value="1"></label>
-                </li>
-                <li>
-                    <label>Product 2<input type="radio" name="demo2-name" value="2" checked="checked"></label>
-                </li>
-                <li>
-                    <label>Product 3<input type="radio" name="demo2-name" value="3"></label>
-                </li>
-            </ul>
-        </div>
-        
-        <h3>Checkbox (from DOM)</h3>
-        <div id="demo4">
-            <ul>
-                <li>
-                    <label>Product 1<input type="checkbox" name="demo3-name-1" value="1"></label>
-                </li>
-                <li>
-                    <label>Product 2<input type="checkbox" name="demo3-name-2" value="2"></label>
-                    <ul>
-                        <li>
-                            <label>Product 2.1<input type="checkbox" name="demo3-name-3" value="2.1"></label>
-                        </li>
-                        <li>
-                            <label>Product 2.2<input type="checkbox" name="demo3-name-4" value="2.2" checked="checked"></label>
-                        </li>
-                        <li>
-                            <label>Product 2.3<input type="checkbox" name="demo3-name-5" value="2.3"></label>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <label>Product 3<input type="checkbox" name="demo3-name-6" value="3" checked="checked"></label>
-                </li>
-            </ul>
-        </div>
+    <h3>Radio with uncheck enabled (from DOM)</h3>
+    <div id="demo3">
+      <ul>
+        <li>
+          <label>Product 1<input type="radio" name="demo2-name" value="1"></label>
+        </li>
+        <li>
+          <label>Product 2<input type="radio" name="demo2-name" value="2" checked="checked"></label>
+        </li>
+        <li>
+          <label>Product 3<input type="radio" name="demo2-name" value="3"></label>
+        </li>
+      </ul>
+    </div>
+    
+    <h3>Checkbox (from DOM)</h3>
+    <div id="demo4">
+      <ul>
+        <li>
+          <label>Product 1<input type="checkbox" name="demo3-name-1" value="1"></label>
+        </li>
+        <li>
+          <label>Product 2<input type="checkbox" name="demo3-name-2" value="2"></label>
+          <ul>
+            <li>
+              <label>Product 2.1<input type="checkbox" name="demo3-name-3" value="2.1"></label>
+            </li>
+            <li>
+              <label>Product 2.2<input type="checkbox" name="demo3-name-4" value="2.2" checked="checked"></label>
+            </li>
+            <li>
+              <label>Product 2.3<input type="checkbox" name="demo3-name-5" value="2.3"></label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label>Product 3<input type="checkbox" name="demo3-name-6" value="3" checked="checked"></label>
+        </li>
+      </ul>
+    </div>
 
-    </form>
+  </form>
 </div>
 
 <script>
-    $(document).ready(function () {
-        var addAction = window.demoFormActions();
+  $(document).ready(function () {
+    var addAction = window.demoFormActions();
 
-        $('body').change(function (e) {
-            console.log(e.target);
-        });
-
-        var dropDown = false;
-        addAction('Drop down N', function () {
-            dropDown = !dropDown;
-            $(this).text(dropDown ? 'Drop down Y' : 'Drop down N');
-            demoEnableJs();
-        });
-
-        var threeStates = false;
-        addAction('Three states N', function () {
-            threeStates = !threeStates;
-            $(this).text(threeStates ? 'Three states Y' : 'Three states N');
-            demoEnableJs();
-        });
-
-        // Store as template
-        var tmpl = $('.avn-form').html();
-        function demoEnableJs() {
-
-            $('.avn-form').html(tmpl); // Refresh DOM
-
-            var data = [{
-                label: 'Product 1', value: 1
-            }, {
-                label: 'Product 2', value: 2
-            }, {
-                label: 'Product 3 (disabled)', value: '3', checkable: false
-            }, {
-                label: 'Product 2.1', value: '2.1', parentValue: '2'
-            }, {
-                label: 'Product 2.2', value: '2.2', parentValue: '2', checked: true
-            }, {
-                label: 'Product 2.3', value: '2.3', parentValue: '2'
-            }, {
-                label: 'Product 2.2.1', value: '2.2.1', parentValue: '2.1'
-            }, {
-                label: 'Product 2.2.2 (disabled)', value: '2.2.2', parentValue: '2.1', checkable: false
-            }, {
-                label: 'Product 2.2.3', value: '2.2.3', parentValue: '2.1'
-            }, {
-                label: 'Product 3.1', value: '3.1', parentValue: '3', checked: true
-            }, {
-                label: 'Product 3.2', value: '3.2', parentValue: '3'
-            }];
-
-            // Giving data in the constructor
-            $('#demo1').avnTreeView({ data: data, closeButton: true, uncheckButton: true, dropDown: dropDown, threeStates: threeStates });
-
-            // Calling the 'build' method
-            $('#demo2').avnTreeView({ type: 'radio', closeButton: true, dropDown: dropDown, threeStates: threeStates }).avnTreeView('build', data);
-
-            $('#demo3').avnTreeView({ uncheckRadio: true, dropDown: dropDown, threeStates: threeStates });
-            $('#demo4').avnTreeView({ uncheckButton: true, dropDown: dropDown, threeStates: threeStates });
-        }
-        demoEnableJs();
+    $('body').change(function (e) {
+      console.log(e.target);
     });
+
+    var dropDown = false;
+    addAction('Drop down N', function () {
+      dropDown = !dropDown;
+      $(this).text(dropDown ? 'Drop down Y' : 'Drop down N');
+      demoEnableJs();
+    });
+
+    var threeStates = false;
+    addAction('Three states N', function () {
+      threeStates = !threeStates;
+      $(this).text(threeStates ? 'Three states Y' : 'Three states N');
+      demoEnableJs();
+    });
+
+    // Store as template
+    var tmpl = $('.avn-form').html();
+    function demoEnableJs() {
+
+      $('.avn-form').html(tmpl); // Refresh DOM
+
+      var data = [{
+        label: 'Product 1', value: 1
+      }, {
+        label: 'Product 2', value: 2
+      }, {
+        label: 'Product 3 (disabled)', value: '3', checkable: false
+      }, {
+        label: 'Product 2.1', value: '2.1', parentValue: '2'
+      }, {
+        label: 'Product 2.2', value: '2.2', parentValue: '2', checked: true
+      }, {
+        label: 'Product 2.3', value: '2.3', parentValue: '2'
+      }, {
+        label: 'Product 2.2.1', value: '2.2.1', parentValue: '2.1'
+      }, {
+        label: 'Product 2.2.2 (disabled)', value: '2.2.2', parentValue: '2.1', checkable: false
+      }, {
+        label: 'Product 2.2.3', value: '2.2.3', parentValue: '2.1'
+      }, {
+        label: 'Product 3.1', value: '3.1', parentValue: '3', checked: true
+      }, {
+        label: 'Product 3.2', value: '3.2', parentValue: '3'
+      }];
+
+      // Giving data in the constructor
+      $('#demo1').avnTreeView({ data: data, closeButton: true, uncheckButton: true, dropDown: dropDown, threeStates: threeStates });
+
+      // Calling the 'build' method
+      $('#demo2').avnTreeView({ type: 'radio', closeButton: true, dropDown: dropDown, threeStates: threeStates }).avnTreeView('build', data);
+
+      $('#demo3').avnTreeView({ uncheckRadio: true, dropDown: dropDown, threeStates: threeStates });
+      $('#demo4').avnTreeView({ uncheckButton: true, dropDown: dropDown, threeStates: threeStates });
+    }
+    demoEnableJs();
+  });
 </script>
 
 </body>

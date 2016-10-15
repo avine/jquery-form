@@ -1,74 +1,74 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>jQuery UI Form Widgets</title>
+  <title>jQuery UI Form Widgets</title>
 
-    <!-- Font Awesome dependency -->
-    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
-    <!-- jQuery dependency -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Font Awesome dependency -->
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
+  <!-- jQuery dependency -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Avine Form css -->
-    <link rel="stylesheet" href="../src/css/avnForm.css" />
-    <!-- Avine Form js -->
-    <script src="../src/js/avnPlugin.js"></script>
-    <script src="../src/js/avnForm.js"></script>
-    <script src="../src/js/avnFormButtonGroup.js"></script>
-    <script src="../src/js/avnFormTreeView.js"></script>
+  <!-- Avine Form css -->
+  <link rel="stylesheet" href="../src/css/avnForm.css" />
+  <!-- Avine Form js -->
+  <script src="../src/js/avnPlugin.js"></script>
+  <script src="../src/js/avnForm.js"></script>
+  <script src="../src/js/avnFormButtonGroup.js"></script>
+  <script src="../src/js/avnFormTreeView.js"></script>
 
-    <!-- Avine Demo helper -->
-    <link rel="stylesheet" href="helper/helper.css" />
-    <script src="helper/helper.js"></script>
+  <!-- Avine Demo helper -->
+  <link rel="stylesheet" href="helper/helper.css" />
+  <script src="helper/helper.js"></script>
 </head>
 <body>
 
 <div class="demo-code-sample">
-    <h1>Form "input"</h1>
-    <div id="demo-form-actions"></div>
+  <h1>Form "input"</h1>
+  <div id="demo-form-actions"></div>
 
-    <form method="GET" action="#" class="avn-form">
+  <form method="GET" action="#" class="avn-form">
 
-        <label for="text1">Text</label><input type="text" id="text1" value="label + input" />
-        <label for="text2">Text</label><input type="text" id="text2" value="label + input" /><br />
+    <label for="text1">Text</label><input type="text" id="text1" value="label + input" />
+    <label for="text2">Text</label><input type="text" id="text2" value="label + input" /><br />
 
-        <label>Text<input type="text" value="label &gt; input" /></label>
-        <label>Text<input type="text" value="label &gt; input" /></label><br />
+    <label>Text<input type="text" value="label &gt; input" /></label>
+    <label>Text<input type="text" value="label &gt; input" /></label><br />
 
-        <hr />
+    <hr />
 
-        <input type="text" id="text3" value="input + label" /><label for="text3">Text</label>
-        <input type="text" id="text4" value="input + label" /><label for="text4">Text</label><br />
+    <input type="text" id="text3" value="input + label" /><label for="text3">Text</label>
+    <input type="text" id="text4" value="input + label" /><label for="text4">Text</label><br />
 
-        <label class="avn-form-nested-inverted"><input type="text" value="label &gt; input" />Text</label>
-        <label class="avn-form-nested-inverted"><input type="text" value="label &gt; input" />Text</label><br />
+    <label class="avn-form-nested-inverted"><input type="text" value="label &gt; input" />Text</label>
+    <label class="avn-form-nested-inverted"><input type="text" value="label &gt; input" />Text</label><br />
 
-        <hr />
+    <hr />
 
-        <label for="text5">Text</label><br /><input type="text" id="text5" value="label + br + input" /><br />
-        <label>Text<br /><input type="text" value="label &gt; br + input" /></label><br />
+    <label for="text5">Text</label><br /><input type="text" id="text5" value="label + br + input" /><br />
+    <label>Text<br /><input type="text" value="label &gt; br + input" /></label><br />
 
-        <hr />
+    <hr />
 
-        <h3>Html 5 inputs</h3>
+    <h3>Html 5 inputs</h3>
 
-        <label><span class="avn-form-nested-label avn-form-100px">Color</span><input class="avn-form-200px" type="color" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Date</span><input class="avn-form-200px" type="date" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Datetime</span><input class="avn-form-200px" type="datetime" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Datetime-local</span><input class="avn-form-200px" type="datetime-local" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Email</span><input class="avn-form-200px" type="email" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Month</span><input class="avn-form-200px" type="month" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Number</span><input class="avn-form-200px" type="number" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Range</span><input class="avn-form-200px" type="range" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Search</span><input class="avn-form-200px" type="search" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Tel</span><input class="avn-form-200px" type="tel" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Time</span><input class="avn-form-200px" type="time" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Url</span><input class="avn-form-200px" type="url" /></label><br />
-        <label><span class="avn-form-nested-label avn-form-100px">Week</span><input class="avn-form-200px" type="week" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Color</span><input class="avn-form-200px" type="color" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Date</span><input class="avn-form-200px" type="date" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Datetime</span><input class="avn-form-200px" type="datetime" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Datetime-local</span><input class="avn-form-200px" type="datetime-local" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Email</span><input class="avn-form-200px" type="email" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Month</span><input class="avn-form-200px" type="month" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Number</span><input class="avn-form-200px" type="number" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Range</span><input class="avn-form-200px" type="range" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Search</span><input class="avn-form-200px" type="search" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Tel</span><input class="avn-form-200px" type="tel" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Time</span><input class="avn-form-200px" type="time" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Url</span><input class="avn-form-200px" type="url" /></label><br />
+    <label><span class="avn-form-nested-label avn-form-100px">Week</span><input class="avn-form-200px" type="week" /></label><br />
 
-    </form>
+  </form>
 
 </div>
 

@@ -1,65 +1,65 @@
 
 html, body {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 a, a:visited {
-    text-decoration: underline;
-    color: #337ab7;
+  text-decoration: underline;
+  color: #337ab7;
 }
 a:hover, a:active, a:focus {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 h2 {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 code {
-    padding: 0 .25em;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    background-color: #eee;
+  padding: 0 .25em;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: #eee;
 }
 
 hr {
-    margin: 1.5em 0;
-    border: none;
-    border-bottom: 1px solid #ccc;
+  margin: 1.5em 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
 }
 
 .demo-code-sample {
-    margin: 2em auto;
-    padding: 0 2em;
-    max-width: 960px;
+  margin: 2em auto;
+  padding: 0 2em;
+  max-width: 960px;
 }
 
 .demo-font-bigger {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 #demo-form-actions {
-    margin: 2em 0;
-    padding: .5em;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    background-color: #eee;
+  margin: 2em 0;
+  padding: .5em;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: #eee;
 }
 
 #demo-form-actions > * {
-    margin: .5em;
+  margin: .5em;
 }
 
 #demo-message {
-    margin: 1em 0;
-    min-height: 1.5em;
-    font-family: monospace;
-    font-size: 1em;
-    color: green;
+  margin: 1em 0;
+  min-height: 1.5em;
+  font-family: monospace;
+  font-size: 1em;
+  color: green;
 }

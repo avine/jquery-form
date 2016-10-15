@@ -1,90 +1,90 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>jQuery UI Form Widgets</title>
+  <title>jQuery UI Form Widgets</title>
 
-    <!-- Font Awesome dependency -->
-    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
-    <!-- jQuery dependency -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Font Awesome dependency -->
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
+  <!-- jQuery dependency -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Avine Form css -->
-    <link rel="stylesheet" href="../src/css/avnForm.css" />
-    <!-- Avine Form js -->
-    <script src="../src/js/avnPlugin.js"></script>
-    <script src="../src/js/avnForm.js"></script>
-    <script src="../src/js/avnFormButtonGroup.js"></script>
-    <script src="../src/js/avnFormTreeView.js"></script>
+  <!-- Avine Form css -->
+  <link rel="stylesheet" href="../src/css/avnForm.css" />
+  <!-- Avine Form js -->
+  <script src="../src/js/avnPlugin.js"></script>
+  <script src="../src/js/avnForm.js"></script>
+  <script src="../src/js/avnFormButtonGroup.js"></script>
+  <script src="../src/js/avnFormTreeView.js"></script>
 
-    <!-- Avine Demo helper -->
-    <link rel="stylesheet" href="helper/helper.css" />
-    <script src="helper/helper.js"></script>
+  <!-- Avine Demo helper -->
+  <link rel="stylesheet" href="helper/helper.css" />
+  <script src="helper/helper.js"></script>
 </head>
 <body>
 
 <div class="demo-code-sample">
-    <h1>jQuery plugin "button-group" - type "checkbox"</h1>
-    <div id="demo-form-actions"></div>
+  <h1>jQuery plugin "button-group" - type "checkbox"</h1>
+  <div id="demo-form-actions"></div>
 
-    <form method="GET" action="#" class="avn-form">
+  <form method="GET" action="#" class="avn-form">
 
-        <div id="demo-message"></div>
+    <div id="demo-message"></div>
 
-        <h3>Horizontal</h3>
-        <div id="demo1"></div>
+    <h3>Horizontal</h3>
+    <div id="demo1"></div>
 
-        <h3>Horizontal full</h3>
-        <div id="demo2" class="avn-form-button-group-h-full"></div>
+    <h3>Horizontal full</h3>
+    <div id="demo2" class="avn-form-button-group-h-full"></div>
 
-        <h3>Horizontal full, fixed width</h3>
-        <div id="demo3" class="avn-form-button-group-h-full avn-form-button-group-h-fixed"></div>
+    <h3>Horizontal full, fixed width</h3>
+    <div id="demo3" class="avn-form-button-group-h-full avn-form-button-group-h-fixed"></div>
 
-        <h3>Vertical</h3>
-        <div id="demo4" class="avn-form-button-group-v"></div>
+    <h3>Vertical</h3>
+    <div id="demo4" class="avn-form-button-group-v"></div>
 
-    </form>
+  </form>
 </div>
 
 <div id="demo-sandbox" style="display:none;">
-    <label>Checkbox 1 (checked)<input type="checkbox" checked /></label><br />
-    <label>Checkbox 2<input type="checkbox" /></label><br />
-    <label>Checkbox 3<input type="checkbox" /></label><br />
-    <label>Checkbox 4 (disabled)<input type="checkbox" disabled /></label>
+  <label>Checkbox 1 (checked)<input type="checkbox" checked /></label><br />
+  <label>Checkbox 2<input type="checkbox" /></label><br />
+  <label>Checkbox 3<input type="checkbox" /></label><br />
+  <label>Checkbox 4 (disabled)<input type="checkbox" disabled /></label>
 </div>
 
 <script>
-    var demoIndex = 1;
-    function demoGetSandbox(id) {
-        var $sandbox = $('#demo-sandbox').clone();
-        $sandbox.find('input').each(function (i) {
-            var item = demoIndex + '-' + (i + 1);
-            $(this).attr('name', 'sandbox' + item).attr('value', item);
-        });
-        demoIndex++;
-        return $(id).html($sandbox.html());
-    }
-    demoGetSandbox('#demo1');
-    demoGetSandbox('#demo2');
-    demoGetSandbox('#demo3');
-    demoGetSandbox('#demo4');
-
-    window.demoFormActions()('avnButtonGroup', function () {
-        $('#demo1').avnButtonGroup();
-        $('#demo2').avnButtonGroup();
-        $('#demo3').avnButtonGroup();
-        $('#demo4').avnButtonGroup();
-    }, true);
-
-    $('body').change(function (e) {
-        var $group = $(e.target).closest('.avn-form-button-group');
-        $('#demo-message').html(
-            '<b>' + $group.attr('id') + ' :</b> ' +
-            JSON.stringify($group.avnButtonGroup('getSelection'))
-        );
+  var demoIndex = 1;
+  function demoGetSandbox(id) {
+    var $sandbox = $('#demo-sandbox').clone();
+    $sandbox.find('input').each(function (i) {
+      var item = demoIndex + '-' + (i + 1);
+      $(this).attr('name', 'sandbox' + item).attr('value', item);
     });
+    demoIndex++;
+    return $(id).html($sandbox.html());
+  }
+  demoGetSandbox('#demo1');
+  demoGetSandbox('#demo2');
+  demoGetSandbox('#demo3');
+  demoGetSandbox('#demo4');
+
+  window.demoFormActions()('avnButtonGroup', function () {
+    $('#demo1').avnButtonGroup();
+    $('#demo2').avnButtonGroup();
+    $('#demo3').avnButtonGroup();
+    $('#demo4').avnButtonGroup();
+  }, true);
+
+  $('body').change(function (e) {
+    var $group = $(e.target).closest('.avn-form-button-group');
+    $('#demo-message').html(
+      '<b>' + $group.attr('id') + ' :</b> ' +
+      JSON.stringify($group.avnButtonGroup('getSelection'))
+    );
+  });
 </script>
 
 </body>

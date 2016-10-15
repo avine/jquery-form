@@ -2,228 +2,228 @@
 /* form-tree-view */
 
 .avn-form .avn-form-tree-view {
-	overflow: auto;
-	margin: 0;
-	padding: 0 @form-tree-view-delta;
-	list-style: none;
+  overflow: auto;
+  margin: 0;
+  padding: 0 @form-tree-view-delta;
+  list-style: none;
 
-	border-radius: @border-radius-xs;
-	border: @border-width solid @form-border-color;
-	background-color: @form-bg-color;
+  border-radius: @border-radius-xs;
+  border: @border-width solid @form-border-color;
+  background-color: @form-bg-color;
 
-	line-height: 1.5em;
-	font-size: 1em;
-	font-family: @font-family;
+  line-height: 1.5em;
+  font-size: 1em;
+  font-family: @font-family;
 
-	ul {
-		margin: 0 0 0 @form-tree-view-shift;
-		padding: 0;
-		list-style: none;
-	}
-	li {
-		margin: @form-tree-view-delta 0;
-		padding: 0;
-		white-space: nowrap;
-		> ul {
-			display: none;
-		}
-		&.avn-form-tree-view-open > ul {
-			display: block;
-		}
-	}
+  ul {
+    margin: 0 0 0 @form-tree-view-shift;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    margin: @form-tree-view-delta 0;
+    padding: 0;
+    white-space: nowrap;
+    > ul {
+      display: none;
+    }
+    &.avn-form-tree-view-open > ul {
+      display: block;
+    }
+  }
 
-	label, .avn-form-tree-view-toggle, .avn-form-tree-view-shift, .avn-form-tree-view-disabled {
-		box-sizing: border-box;
-		display: inline-block;
-		padding: @form-padding-v @form-padding-h;
-	}
+  label, .avn-form-tree-view-toggle, .avn-form-tree-view-shift, .avn-form-tree-view-disabled {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: @form-padding-v @form-padding-h;
+  }
 
-	.avn-form-tree-view-disabled {
-		font-style: normal;
-	}
+  .avn-form-tree-view-disabled {
+    font-style: normal;
+  }
 
-	.avn-form-tree-view-shift {
-		padding-right: 0;
-		padding-left: @form-tree-view-shift;
-	}
+  .avn-form-tree-view-shift {
+    padding-right: 0;
+    padding-left: @form-tree-view-shift;
+  }
 
-	.avn-form-tree-view-toggle {
-		width: @form-tree-view-shift;
-		height: 1.5em;
-		cursor: pointer;
-		font-family: FontAwesome;
-	}
-	.avn-form-tree-view-toggle:after {
-		display: inline-block;
-		transition: transform .1s ease,  color .1s ease;
-		content: "\f054";
-	}
+  .avn-form-tree-view-toggle {
+    width: @form-tree-view-shift;
+    height: 1.5em;
+    cursor: pointer;
+    font-family: FontAwesome;
+  }
+  .avn-form-tree-view-toggle:after {
+    display: inline-block;
+    transition: transform .1s ease,  color .1s ease;
+    content: "\f054";
+  }
 
-	li.avn-form-tree-view-open > .avn-form-tree-view-toggle:after {
-		transform: rotate(90deg);
-		color: @color-base-darker;
-	}
+  li.avn-form-tree-view-open > .avn-form-tree-view-toggle:after {
+    transform: rotate(90deg);
+    color: @color-base-darker;
+  }
 
-	// input and label
+  // input and label
 
-	input {
-		display: none; // Comment this line to view the input tag
-		margin-left: 0 !important;
-	}
-	label {
+  input {
+    display: none; // Comment this line to view the input tag
+    margin-left: 0 !important;
+  }
+  label {
 
-		// Optional hack: when the scrollbar appears on the y axis, it can blur the end of the label text
-		// To prevent that, just add some padding inside the label
-		//padding-right: 15px;
+    // Optional hack: when the scrollbar appears on the y axis, it can blur the end of the label text
+    // To prevent that, just add some padding inside the label
+    //padding-right: 15px;
 
-		cursor: pointer;
-		border-radius: @border-radius-xs;
-		transition:
-			background-color @form-transition ease,
-			color @form-transition ease;
-		&:hover {
-			background-color: @color-pale;
-		}
-		&.avn-form-tree-view-active {
-			background-color: @color-base;
-			color: @color-pale;
-		}
-	}
+    cursor: pointer;
+    border-radius: @border-radius-xs;
+    transition:
+      background-color @form-transition ease,
+      color @form-transition ease;
+    &:hover {
+      background-color: @color-pale;
+    }
+    &.avn-form-tree-view-active {
+      background-color: @color-base;
+      color: @color-pale;
+    }
+  }
 
-	// Tree view with only one level
-	&.avn-form-tree-view-single {
-		.avn-form-tree-view-shift  {
-			display: none;
-		}
-		label {
-			display: block;
-		}
-	}
+  // Tree view with only one level
+  &.avn-form-tree-view-single {
+    .avn-form-tree-view-shift  {
+      display: none;
+    }
+    label {
+      display: block;
+    }
+  }
 
 }
 
 // wrap
 
 .avn-form .avn-form-tree-view-wrap {
-	position: relative;
-	margin: 0 0 @form-margin 0;
-	text-align: left;
-	color: @color-default;
-	.avn-form-tree-view-tool {
-		opacity: .8;
-		position: absolute;
-		top: @form-padding-v;
-		right: @form-padding-h;
-		font-family: FontAwesome;
+  position: relative;
+  margin: 0 0 @form-margin 0;
+  text-align: left;
+  color: @color-default;
+  .avn-form-tree-view-tool {
+    opacity: .8;
+    position: absolute;
+    top: @form-padding-v;
+    right: @form-padding-h;
+    font-family: FontAwesome;
 
-		> * {
-			display: inline-block;
-			margin-left: .5em;
-			cursor: pointer;
-			line-height: 1.25em;
-			font-size: 1.25em;
-		}
-	}
+    > * {
+      display: inline-block;
+      margin-left: .5em;
+      cursor: pointer;
+      line-height: 1.25em;
+      font-size: 1.25em;
+    }
+  }
 
-	.avn-form-tree-view-uncheck {
-		&:after { content: "\f0e7"; }
-	}
-	.avn-form-tree-view-close {
-		&:after { content: "\f102"; }
-		transition: all @form-tree-view-drop-down-delay ease @form-tree-view-drop-down-delay;
-		transform: rotate(0deg);
-		&.avn-form-tree-view-reverse { transform: rotate(180deg); }
-	}
+  .avn-form-tree-view-uncheck {
+    &:after { content: "\f0e7"; }
+  }
+  .avn-form-tree-view-close {
+    &:after { content: "\f102"; }
+    transition: all @form-tree-view-drop-down-delay ease @form-tree-view-drop-down-delay;
+    transform: rotate(0deg);
+    &.avn-form-tree-view-reverse { transform: rotate(180deg); }
+  }
 }
 
 // Drop down (trigger and target)
 
 .avn-form .avn-form-tree-view-drop-trigger {
-	margin: 0;
-	padding: @form-padding-v @form-padding-h;
-	padding-right: 1.5em; // value same as "fa-angle-down" width
+  margin: 0;
+  padding: @form-padding-v @form-padding-h;
+  padding-right: 1.5em; // value same as "fa-angle-down" width
 
-	box-sizing: border-box;
-	border-radius: @border-radius-xs;
-	border: @border-width solid @form-border-color;
-	background-color: @form-bg-color;
+  box-sizing: border-box;
+  border-radius: @border-radius-xs;
+  border: @border-width solid @form-border-color;
+  background-color: @form-bg-color;
 
-	line-height: 1.5em;
-	font-size: 1em;
-	font-family: @font-family;
+  line-height: 1.5em;
+  font-size: 1em;
+  font-family: @font-family;
 
-	height: 2em;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+  height: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
-	color: @color-base-darker;
-	cursor: pointer;
+  color: @color-base-darker;
+  cursor: pointer;
 
-	transition: background-color @form-transition ease;
-	&:hover { background-color: @color-pale; }
+  transition: background-color @form-transition ease;
+  &:hover { background-color: @color-pale; }
 
-	// fa-angle-down
-	&:after {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 1.5em;
-		height: 2em;
-		line-height: 2em;
-		text-align: center;
-		font-family: FontAwesome;
-		content: "\f107";
-	}
+  // fa-angle-down
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-family: FontAwesome;
+    content: "\f107";
+  }
 }
 .avn-form .avn-form-tree-view-drop-target {
-	position: absolute;
-	z-index: 99;
-	top: -9999px;
-	left: -9999px;
-	max-width: 100%;
-	min-width: 15em;
-	max-height: @form-tree-view-drop-down-max-height;
-	//color: @color-default;
-	opacity: 0;
-	clip: rect(0, 9999px, 0, 0);
-	transition:
-		opacity @form-tree-view-drop-down-delay ease-in,
-		clip @form-tree-view-drop-down-delay ease-out,
-		top 0s ease @form-tree-view-drop-down-delay,
-		left 0s ease @form-tree-view-drop-down-delay;
-	&.avn-form-tree-view-drop-active {
-		top: 2.1em;
-		left: 0;
-		opacity: 1;
-		clip: rect(0, 9999px, @form-tree-view-drop-down-max-height, 0);
-		transition:
-			opacity @form-tree-view-drop-down-delay ease-out,
-			clip @form-tree-view-drop-down-delay ease-in;
-	}
-	.avn-form-tree-view {
-		box-shadow: 2px 2px 2px rgba(0,0,0,.1);
-		box-sizing: border-box;
-		max-height: inherit;
-	}
+  position: absolute;
+  z-index: 99;
+  top: -9999px;
+  left: -9999px;
+  max-width: 100%;
+  min-width: 15em;
+  max-height: @form-tree-view-drop-down-max-height;
+  //color: @color-default;
+  opacity: 0;
+  clip: rect(0, 9999px, 0, 0);
+  transition:
+    opacity @form-tree-view-drop-down-delay ease-in,
+    clip @form-tree-view-drop-down-delay ease-out,
+    top 0s ease @form-tree-view-drop-down-delay,
+    left 0s ease @form-tree-view-drop-down-delay;
+  &.avn-form-tree-view-drop-active {
+    top: 2.1em;
+    left: 0;
+    opacity: 1;
+    clip: rect(0, 9999px, @form-tree-view-drop-down-max-height, 0);
+    transition:
+      opacity @form-tree-view-drop-down-delay ease-out,
+      clip @form-tree-view-drop-down-delay ease-in;
+  }
+  .avn-form-tree-view {
+    box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+    box-sizing: border-box;
+    max-height: inherit;
+  }
 }
 .avn-form .avn-form-tree-view-drop-sep {
-	padding: 0 @form-padding-h;
-	color: @form-border-color;
+  padding: 0 @form-padding-h;
+  color: @form-border-color;
 }
 
 // 3 states
 
 .avn-form-tree-view-3states {
-	margin-left: @form-padding-h;
-	display: inline-block;
-	height: 1.5em;
-	cursor: pointer;
-	user-select: none;
-	font-style: normal;
-	font-family: FontAwesome;
+  margin-left: @form-padding-h;
+  display: inline-block;
+  height: 1.5em;
+  cursor: pointer;
+  user-select: none;
+  font-style: normal;
+  font-family: FontAwesome;
 
-	&[data-state="none"]:after { content: "\f096"; }
-	&[data-state="half"]:after { content: "\f046"; }
-	&[data-state="all"]:after { content: "\f14a"; color: @color-base-darker; }
+  &[data-state="none"]:after { content: "\f096"; }
+  &[data-state="half"]:after { content: "\f046"; }
+  &[data-state="all"]:after { content: "\f14a"; color: @color-base-darker; }
 }

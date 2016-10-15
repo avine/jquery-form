@@ -7,320 +7,320 @@
 
 .avn-form {
 
-	input, select, textarea, button, label, .avn-form-select, .avn-form-group-title, .avn-form-group-content {
-		display: inline-block;
-		box-sizing: border-box;
-		vertical-align: top;
-		font-family: @font-family;
-		font-size: 1em;
-		line-height: @form-line-height;
-	}
+  input, select, textarea, button, label, .avn-form-select, .avn-form-group-title, .avn-form-group-content {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: @font-family;
+    font-size: 1em;
+    line-height: @form-line-height;
+  }
 
-	// margin, padding, width and height
+  // margin, padding, width and height
 
-	input, select, textarea, button {
-		margin: 0 0 @form-margin 0;
-		padding: 0 @form-padding-h;
-	}
-	.avn-form-select {
-		margin: 0 0 @form-margin 0;
-	}
-	// Info: for the .avn-form-group-* margin and padding see bellow...
+  input, select, textarea, button {
+    margin: 0 0 @form-margin 0;
+    padding: 0 @form-padding-h;
+  }
+  .avn-form-select {
+    margin: 0 0 @form-margin 0;
+  }
+  // Info: for the .avn-form-group-* margin and padding see bellow...
 
-	input, select, textarea, button, .avn-form-select {
-		+ input, + select, + textarea, + button, + .avn-form-select {
-			margin-left: @form-padding-h;
-		}
-	}
+  input, select, textarea, button, .avn-form-select {
+    + input, + select, + textarea, + button, + .avn-form-select {
+      margin-left: @form-padding-h;
+    }
+  }
 
-	label {
-		font-weight: normal; // just because of Bootstrap which renders label in bold
-		padding: @form-padding-v @form-padding-h 0 @form-padding-h;
+  label {
+    font-weight: normal; // just because of Bootstrap which renders label in bold
+    padding: @form-padding-v @form-padding-h 0 @form-padding-h;
 
-		input, select, textarea, button, .avn-form-select {
-			margin-top: -@form-padding-v;
-			margin-right: -@form-padding-h;
-			margin-left: @form-padding-h;
-		}
+    input, select, textarea, button, .avn-form-select {
+      margin-top: -@form-padding-v;
+      margin-right: -@form-padding-h;
+      margin-left: @form-padding-h;
+    }
 
-		// Markup for a field nested into the label:
-		//
-		// By default, the label text is expected to be inserted before the field (which is fine for an input text):
-		//		<label>Text <input type="text" /></label>
-		// 
-		// To insert the label text after the field (which is fine for an input chechbox) use:
-		//		<label><input type="checkbox" class="avn-form-nested-inverted" /> Text</label>
-		&.avn-form-nested-inverted {
-			input, select, textarea, button, .avn-form-select {
-				margin-right: @form-padding-h;
-				margin-left: -@form-padding-h;
-			}
-		}
+    // Markup for a field nested into the label:
+    //
+    // By default, the label text is expected to be inserted before the field (which is fine for an input text):
+    //    <label>Text <input type="text" /></label>
+    // 
+    // To insert the label text after the field (which is fine for an input chechbox) use:
+    //    <label><input type="checkbox" class="avn-form-nested-inverted" /> Text</label>
+    &.avn-form-nested-inverted {
+      input, select, textarea, button, .avn-form-select {
+        margin-right: @form-padding-h;
+        margin-left: -@form-padding-h;
+      }
+    }
 
-		br + input, br + select, br + textarea, br + button, br + .avn-form-select {
-			margin-top: 0;
-			margin-left: -@form-padding-h;
-		}
+    br + input, br + select, br + textarea, br + button, br + .avn-form-select {
+      margin-top: 0;
+      margin-left: -@form-padding-h;
+    }
 
-		> .avn-form-nested-label {
-			display: inline-block; // Tip: see below how to use this class (*)
-		}
+    > .avn-form-nested-label {
+      display: inline-block; // Tip: see below how to use this class (*)
+    }
 
-		//// Tip: use this rule if you want to add space between labels (when all fields are nested into they labels)
-		//+ label { margin-left: @form-padding-h; }
-	}
+    //// Tip: use this rule if you want to add space between labels (when all fields are nested into they labels)
+    //+ label { margin-left: @form-padding-h; }
+  }
 
-	// Adapt the input and label width:
-	//
-	// 1. Simple:
-	//	<label class="avn-form-100px">Label</label>
-	//	<input class="avn-form-200px" value="Input" />
-	//
-	// 2. Nested (*):
-	//	<label>
-	//		<span class="avn-form-nested-label avn-form-100px">Label</span>
-	//		<input class="avn-form-200px" value="Input" />
-	//	</label>
+  // Adapt the input and label width:
+  //
+  // 1. Simple:
+  //  <label class="avn-form-100px">Label</label>
+  //  <input class="avn-form-200px" value="Input" />
+  //
+  // 2. Nested (*):
+  //  <label>
+  //    <span class="avn-form-nested-label avn-form-100px">Label</span>
+  //    <input class="avn-form-200px" value="Input" />
+  //  </label>
 
-	.avn-form-100px { width: 100px; }
-	.avn-form-150px { width: 150px; }
-	.avn-form-200px { width: 200px; }
-	.avn-form-250px { width: 250px; }
+  .avn-form-100px { width: 100px; }
+  .avn-form-150px { width: 150px; }
+  .avn-form-200px { width: 200px; }
+  .avn-form-250px { width: 250px; }
 
-	.avn-form-25pc  { width:  25%; }
-	.avn-form-50pc  { width:  50%; }
-	.avn-form-75pc  { width:  75%; }
-	.avn-form-100pc { width: 100%; }
+  .avn-form-25pc  { width:  25%; }
+  .avn-form-50pc  { width:  50%; }
+  .avn-form-75pc  { width:  75%; }
+  .avn-form-100pc { width: 100%; }
 
-	input, select, .avn-form-select {
-		height: @form-min-height;
-	}
-	select[multiple] {
-		height: auto;
-	}
-	button {
-		min-height: @form-min-height;
-	}
+  input, select, .avn-form-select {
+    height: @form-min-height;
+  }
+  select[multiple] {
+    height: auto;
+  }
+  button {
+    min-height: @form-min-height;
+  }
 
-	// border, background and color
+  // border, background and color
 
-	label {
-		color: @color-base-darker;
-		user-select: none;
-	}
-	input, select, textarea, button, .avn-form-select {
-		border-radius: @border-radius-xs;
-		border: @border-width solid @form-border-color;
-		background-color: @form-bg-color;
-		color: @color-default;
-		transition:
-			box-shadow @form-transition ease,
-			border-color @form-transition ease,
-			background-color @form-transition ease,
-			color @form-transition ease;
+  label {
+    color: @color-base-darker;
+    user-select: none;
+  }
+  input, select, textarea, button, .avn-form-select {
+    border-radius: @border-radius-xs;
+    border: @border-width solid @form-border-color;
+    background-color: @form-bg-color;
+    color: @color-default;
+    transition:
+      box-shadow @form-transition ease,
+      border-color @form-transition ease,
+      background-color @form-transition ease,
+      color @form-transition ease;
 
-		&:hover {
-			background-color: @color-pale;
-		}
-		&:focus {
-			// Info: this :focus selector is useless for the .avn-form-select (which is not an input form).
-			// In this case, we have defined a special class: .avn-form-select-focus
-			.avn-form-field-focus();
-		}
-	}
-	// The special class .avn-form-select-focus is added/removed automatically (on focus/blur events of the underlying <select>).
-	// See the function $.avnForm.selectWrapperEventHandler in the script "avnForm.js" for more details
-	.avn-form-select.avn-form-select-focus {
-		.avn-form-field-focus();
-	}
-	.avn-form-field-focus() {
-		box-shadow: 0 0 5px rgba(0,0,0, .1);
-		border-color: @color-base;
-		background-color: @form-bg-color-active;
-		outline: none;
-	}
-	
-	// Field appearance (Chrome and Firefox)
+    &:hover {
+      background-color: @color-pale;
+    }
+    &:focus {
+      // Info: this :focus selector is useless for the .avn-form-select (which is not an input form).
+      // In this case, we have defined a special class: .avn-form-select-focus
+      .avn-form-field-focus();
+    }
+  }
+  // The special class .avn-form-select-focus is added/removed automatically (on focus/blur events of the underlying <select>).
+  // See the function $.avnForm.selectWrapperEventHandler in the script "avnForm.js" for more details
+  .avn-form-select.avn-form-select-focus {
+    .avn-form-field-focus();
+  }
+  .avn-form-field-focus() {
+    box-shadow: 0 0 5px rgba(0,0,0, .1);
+    border-color: @color-base;
+    background-color: @form-bg-color-active;
+    outline: none;
+  }
+  
+  // Field appearance (Chrome and Firefox)
 
-    // Remove default
-    select, textarea, button, input { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+  // Remove default
+  select, textarea, button, input { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 
-	// Restore default
-	.form-input-appearance(checkbox);
-	.form-input-appearance(radio);
+  // Restore default
+  .form-input-appearance(checkbox);
+  .form-input-appearance(radio);
 
-	.form-input-appearance(@type) {
-		input[type="@{type}"] { -webkit-appearance: @type; -moz-appearance: @type; appearance: @type; }
-	}
-	
-	// Special for IE appearance
-	select::-ms-expand { display: none; }
+  .form-input-appearance(@type) {
+    input[type="@{type}"] { -webkit-appearance: @type; -moz-appearance: @type; appearance: @type; }
+  }
+  
+  // Special for IE appearance
+  select::-ms-expand { display: none; }
 
-	// radio, checkbox and file
+  // radio, checkbox and file
 
-	input {
-		&[type="checkbox"], &[type="radio"], &[type="file"] {
-			padding: 0;
-			box-shadow: none !important;
-			border: none !important;
-			background-color: transparent !important;
-		}
-	}
+  input {
+    &[type="checkbox"], &[type="radio"], &[type="file"] {
+      padding: 0;
+      box-shadow: none !important;
+      border: none !important;
+      background-color: transparent !important;
+    }
+  }
 
-	// submit and button
+  // submit and button
 
-	input[type="submit"], input[type="button"], button {
-		padding-right: 1em;
-		padding-left: 1em;
-		box-shadow: 1px 1px 1px rgba(255,255,255, .15) inset;
-		background-color:  @color-base;
-		color: #fff;
+  input[type="submit"], input[type="button"], button {
+    padding-right: 1em;
+    padding-left: 1em;
+    box-shadow: 1px 1px 1px rgba(255,255,255, .15) inset;
+    background-color:  @color-base;
+    color: #fff;
 
-		&:hover {
-			box-shadow: 1px 1px 1px rgba(0,0,0, .15) inset;
-			background-color: @color-base-darker;
-			color: #fff;
-		}
-		&:active, &:focus {
-			box-shadow: none;
-			background-color: #fff;
-			color: @color-base;
-		}
-	}
+    &:hover {
+      box-shadow: 1px 1px 1px rgba(0,0,0, .15) inset;
+      background-color: @color-base-darker;
+      color: #fff;
+    }
+    &:active, &:focus {
+      box-shadow: none;
+      background-color: #fff;
+      color: @color-base;
+    }
+  }
 
-	// select (wrapper)
+  // select (wrapper)
 
-	.avn-form-select {
-		position: relative;
-		&:before {
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 1.5em;
-			text-align: center;	
-			line-height: ~"calc(@{form-min-height} - @{form-double-border-width})";
+  .avn-form-select {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1.5em;
+      text-align: center;
+      line-height: ~"calc(@{form-min-height} - @{form-double-border-width})";
 
-			border-radius: 0 (@border-radius-xs - @border-width) (@border-radius-xs - @border-width) 0;
-			border-left: @border-width solid @form-border-color;
-			box-sizing: border-box;
+      border-radius: 0 (@border-radius-xs - @border-width) (@border-radius-xs - @border-width) 0;
+      border-left: @border-width solid @form-border-color;
+      box-sizing: border-box;
 
-			content: "\f107";
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			color: @color-base;
-			
-			transition: inherit;
-		}
-		&.avn-form-select-focus:before {
-			border-left-color: @color-base;
-			background-color: @color-pale;
-		}
-		> select {
-			position: relative;
-			margin: -@border-width 0px !important;
-			padding-right: 2em !important;
-			
-			box-shadow: none !important;
-			border: none !important;
-			background: none !important;
-			
-			// Tip: You should simply not use the .avn-form-select pattern on <select multiple>
-			// Because in this case, the font-awesome "angle-down" is useless...
-			&[multiple] { margin: 0 !important; }
-		}
-	}
+      content: "\f107";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      color: @color-base;
+      
+      transition: inherit;
+    }
+    &.avn-form-select-focus:before {
+      border-left-color: @color-base;
+      background-color: @color-pale;
+    }
+    > select {
+      position: relative;
+      margin: -@border-width 0px !important;
+      padding-right: 2em !important;
+      
+      box-shadow: none !important;
+      border: none !important;
+      background: none !important;
+      
+      // Tip: You should simply not use the .avn-form-select pattern on <select multiple>
+      // Because in this case, the font-awesome "angle-down" is useless...
+      &[multiple] { margin: 0 !important; }
+    }
+  }
 
-	// readonly, disabled and required
+  // readonly, disabled and required
 
-	[readonly] {
-		box-shadow: none !important;
-		border-color: @form-border-color !important;
-		background-color: #f6f6f6 !important;
-	}
+  [readonly] {
+    box-shadow: none !important;
+    border-color: @form-border-color !important;
+    background-color: #f6f6f6 !important;
+  }
 
-	[disabled] {
-		box-shadow: none !important;
-		background-color: #f6f6f6 !important;
-		color: #ccc !important;
-		//font-style: italic;
-	}
+  [disabled] {
+    box-shadow: none !important;
+    background-color: #f6f6f6 !important;
+    color: #ccc !important;
+    //font-style: italic;
+  }
 
-	[required]:after { // Warning: this is not working because form fields doesn't support the :after selector :(
-		margin-left: 5px;
-		vertical-align: super;
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		font-size: smaller;
-		color: red;
-		content: "\f069";
-	}
+  [required]:after { // Warning: this is not working because form fields doesn't support the :after selector :(
+    margin-left: 5px;
+    vertical-align: super;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: smaller;
+    color: red;
+    content: "\f069";
+  }
 
-	// Reset input and button style
-	input, button {
-		&.avn-form-no-style {
-			margin: 0;
-			padding: 0;
-			box-shadow: none;
-			border: none;
-			background-color: transparent;
-			color: @color-base-darker;
-			cursor: pointer;
-		}
-	}
+  // Reset input and button style
+  input, button {
+    &.avn-form-no-style {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      background-color: transparent;
+      color: @color-base-darker;
+      cursor: pointer;
+    }
+  }
 
-	// fieldset
+  // fieldset
 
-	fieldset {
-		background-color: #f2f2f2;
-		border: 1px solid #eaeaea;
-		margin: @form-margin 0;
-		padding: 1em;
-		border-radius: 2px;
-		box-shadow: 1px 1px 0 #ddd;
-	}
-	legend {
-		margin: 0;
-		padding: 0 1em;
-		border-radius: 2px;
-		border: 1px solid #eaeaea;
-		background-color: #fff;
-		line-height: 1.5em;
-		font-size: 1.3em;
-		font-variant: small-caps;
-	}
+  fieldset {
+    background-color: #f2f2f2;
+    border: 1px solid #eaeaea;
+    margin: @form-margin 0;
+    padding: 1em;
+    border-radius: 2px;
+    box-shadow: 1px 1px 0 #ddd;
+  }
+  legend {
+    margin: 0;
+    padding: 0 1em;
+    border-radius: 2px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    line-height: 1.5em;
+    font-size: 1.3em;
+    font-variant: small-caps;
+  }
 
-	// group
+  // group
 
-	.avn-form-group-title {
-		margin: @form-padding-v @form-padding-h @form-margin 0;
-		font-weight: bold;
-	}
-	.avn-form-group-content {
-		margin: 0 0 @form-margin 0;
-		display: block;
-		&.avn-form-group-inline {
-			display: inline-block;
-			> label:first-child {
-				padding-left: 0; // Remove
-				&.avn-form-nested-inverted {
-					padding-left: @form-padding-h; // Restore
-				}
-			}
-		}
-	}
+  .avn-form-group-title {
+    margin: @form-padding-v @form-padding-h @form-margin 0;
+    font-weight: bold;
+  }
+  .avn-form-group-content {
+    margin: 0 0 @form-margin 0;
+    display: block;
+    &.avn-form-group-inline {
+      display: inline-block;
+      > label:first-child {
+        padding-left: 0; // Remove
+        &.avn-form-nested-inverted {
+          padding-left: @form-padding-h; // Restore
+        }
+      }
+    }
+  }
 
-	// The following CSS is designed for:
-	//		- form-button-group.less
-	//		- form-tree-view.less
-	//
-    // We want to remove the margin-bottom of the class .avn-form-group-title in some cases.
-    // To do that, we adds a negative margin-top to its next sibling...
-    .avn-form-group-title + .avn-form-group-content {
-		//&.avn-form-button-group, &.avn-form-tree-view, &.avn-form-tree-view-wrap {
-			margin-top: -@form-margin;
-		//}
-	}
+  // The following CSS is designed for:
+  //    - form-button-group.less
+  //    - form-tree-view.less
+  //
+  // We want to remove the margin-bottom of the class .avn-form-group-title in some cases.
+  // To do that, we adds a negative margin-top to its next sibling...
+  .avn-form-group-title + .avn-form-group-content {
+    //&.avn-form-button-group, &.avn-form-tree-view, &.avn-form-tree-view-wrap {
+      margin-top: -@form-margin;
+    //}
+  }
 
 }

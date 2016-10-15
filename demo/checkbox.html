@@ -1,79 +1,79 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>jQuery UI Form Widgets</title>
+  <title>jQuery UI Form Widgets</title>
 
-    <!-- Font Awesome dependency -->
-    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
-    <!-- jQuery dependency -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Font Awesome dependency -->
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
+  <!-- jQuery dependency -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Avine Form css -->
-    <link rel="stylesheet" href="../src/css/avnForm.css" />
-    <!-- Avine Form js -->
-    <script src="../src/js/avnPlugin.js"></script>
-    <script src="../src/js/avnForm.js"></script>
-    <script src="../src/js/avnFormButtonGroup.js"></script>
-    <script src="../src/js/avnFormTreeView.js"></script>
+  <!-- Avine Form css -->
+  <link rel="stylesheet" href="../src/css/avnForm.css" />
+  <!-- Avine Form js -->
+  <script src="../src/js/avnPlugin.js"></script>
+  <script src="../src/js/avnForm.js"></script>
+  <script src="../src/js/avnFormButtonGroup.js"></script>
+  <script src="../src/js/avnFormTreeView.js"></script>
 
-    <!-- Avine Demo helper -->
-    <link rel="stylesheet" href="helper/helper.css" />
-    <script src="helper/helper.js"></script>
+  <!-- Avine Demo helper -->
+  <link rel="stylesheet" href="helper/helper.css" />
+  <script src="helper/helper.js"></script>
 </head>
 <body>
 
 <div class="demo-code-sample">
-    <h1>Form "checkbox"</h1>
-    <div id="demo-form-actions"></div>
+  <h1>Form "checkbox"</h1>
+  <div id="demo-form-actions"></div>
 
-    <form method="GET" action="#" class="avn-form">
+  <form method="GET" action="#" class="avn-form">
 
-        <h3>Label + Input</h3>
-        <label for="checkbox1-1">Checkbox 1</label><input type="checkbox" id="checkbox1-1" checked="checked" />
-        <label for="checkbox1-2">Checkbox 2</label><input type="checkbox" id="checkbox1-2" />
-        <label for="checkbox1-3">Checkbox 3</label><input type="checkbox" id="checkbox1-3" /><br />
+    <h3>Label + Input</h3>
+    <label for="checkbox1-1">Checkbox 1</label><input type="checkbox" id="checkbox1-1" checked="checked" />
+    <label for="checkbox1-2">Checkbox 2</label><input type="checkbox" id="checkbox1-2" />
+    <label for="checkbox1-3">Checkbox 3</label><input type="checkbox" id="checkbox1-3" /><br />
 
-        <h3>Label &gt; Input</h3>
-        <label>Checkbox 1<input type="checkbox" checked="checked" /></label>
-        <label>Checkbox 2<input type="checkbox" /></label>
-        <label>Checkbox 3<input type="checkbox" /></label><br />
+    <h3>Label &gt; Input</h3>
+    <label>Checkbox 1<input type="checkbox" checked="checked" /></label>
+    <label>Checkbox 2<input type="checkbox" /></label>
+    <label>Checkbox 3<input type="checkbox" /></label><br />
 
-        <h3>Label + Input + br</h3>
-        <label for="checkbox2-1">Checkbox 1</label><input type="checkbox" id="checkbox2-1" checked="checked" /><br />
-        <label for="checkbox2-2">Checkbox 2</label><input type="checkbox" id="checkbox2-2" /><br />
-        <label for="checkbox2-3">Checkbox 3</label><input type="checkbox" id="checkbox2-3" /><br />
+    <h3>Label + Input + br</h3>
+    <label for="checkbox2-1">Checkbox 1</label><input type="checkbox" id="checkbox2-1" checked="checked" /><br />
+    <label for="checkbox2-2">Checkbox 2</label><input type="checkbox" id="checkbox2-2" /><br />
+    <label for="checkbox2-3">Checkbox 3</label><input type="checkbox" id="checkbox2-3" /><br />
 
-        <h3>(Label &gt; Input) + br</h3>
-        <label>Checkbox 1<input type="checkbox" checked="checked" /></label><br />
-        <label>Checkbox 2<input type="checkbox" /></label><br />
-        <label>Checkbox 3<input type="checkbox" /></label>
+    <h3>(Label &gt; Input) + br</h3>
+    <label>Checkbox 1<input type="checkbox" checked="checked" /></label><br />
+    <label>Checkbox 2<input type="checkbox" /></label><br />
+    <label>Checkbox 3<input type="checkbox" /></label>
 
-        <hr />
+    <hr />
 
-        <h3>Input + Label</h3>
-        <input type="checkbox" id="checkbox3-1" checked="checked" /><label for="checkbox3-1">Checkbox 1</label>
-        <input type="checkbox" id="checkbox3-2" /><label for="checkbox3-2">Checkbox 2</label>
-        <input type="checkbox" id="checkbox3-3" /><label for="checkbox3-3">Checkbox 3</label><br />
+    <h3>Input + Label</h3>
+    <input type="checkbox" id="checkbox3-1" checked="checked" /><label for="checkbox3-1">Checkbox 1</label>
+    <input type="checkbox" id="checkbox3-2" /><label for="checkbox3-2">Checkbox 2</label>
+    <input type="checkbox" id="checkbox3-3" /><label for="checkbox3-3">Checkbox 3</label><br />
 
-        <h3>Label &gt; Input</h3>
-        <label class="avn-form-nested-inverted"><input type="checkbox" checked="checked" />Checkbox 1</label>
-        <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 2</label>
-        <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 3</label><br />
+    <h3>Label &gt; Input</h3>
+    <label class="avn-form-nested-inverted"><input type="checkbox" checked="checked" />Checkbox 1</label>
+    <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 2</label>
+    <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 3</label><br />
 
-        <h3>Input + Label + br</h3>
-        <input type="checkbox" id="checkbox4-1" checked="checked" /><label for="checkbox4-1">Checkbox 1</label><br />
-        <input type="checkbox" id="checkbox4-2" /><label for="checkbox4-2">Checkbox 2</label><br />
-        <input type="checkbox" id="checkbox4-3" /><label for="checkbox4-3">Checkbox 3</label><br />
+    <h3>Input + Label + br</h3>
+    <input type="checkbox" id="checkbox4-1" checked="checked" /><label for="checkbox4-1">Checkbox 1</label><br />
+    <input type="checkbox" id="checkbox4-2" /><label for="checkbox4-2">Checkbox 2</label><br />
+    <input type="checkbox" id="checkbox4-3" /><label for="checkbox4-3">Checkbox 3</label><br />
 
-        <h3>(Label &gt; Input) + br</h3>
-        <label class="avn-form-nested-inverted"><input type="checkbox" checked="checked" />Checkbox 1</label><br />
-        <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 2</label><br />
-        <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 3</label>
+    <h3>(Label &gt; Input) + br</h3>
+    <label class="avn-form-nested-inverted"><input type="checkbox" checked="checked" />Checkbox 1</label><br />
+    <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 2</label><br />
+    <label class="avn-form-nested-inverted"><input type="checkbox" />Checkbox 3</label>
 
-    </form>
+  </form>
 
 </div>
 

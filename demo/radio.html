@@ -1,79 +1,79 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>jQuery UI Form Widgets</title>
+  <title>jQuery UI Form Widgets</title>
 
-    <!-- Font Awesome dependency -->
-    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
-    <!-- jQuery dependency -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Font Awesome dependency -->
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css " />
+  <!-- jQuery dependency -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Avine Form css -->
-    <link rel="stylesheet" href="../src/css/avnForm.css" />
-    <!-- Avine Form js -->
-    <script src="../src/js/avnPlugin.js"></script>
-    <script src="../src/js/avnForm.js"></script>
-    <script src="../src/js/avnFormButtonGroup.js"></script>
-    <script src="../src/js/avnFormTreeView.js"></script>
+  <!-- Avine Form css -->
+  <link rel="stylesheet" href="../src/css/avnForm.css" />
+  <!-- Avine Form js -->
+  <script src="../src/js/avnPlugin.js"></script>
+  <script src="../src/js/avnForm.js"></script>
+  <script src="../src/js/avnFormButtonGroup.js"></script>
+  <script src="../src/js/avnFormTreeView.js"></script>
 
-    <!-- Avine Demo helper -->
-    <link rel="stylesheet" href="helper/helper.css" />
-    <script src="helper/helper.js"></script>
+  <!-- Avine Demo helper -->
+  <link rel="stylesheet" href="helper/helper.css" />
+  <script src="helper/helper.js"></script>
 </head>
 <body>
 
 <div class="demo-code-sample">
-    <h1>Form "radio"</h1>
-    <div id="demo-form-actions"></div>
+  <h1>Form "radio"</h1>
+  <div id="demo-form-actions"></div>
 
-    <form method="GET" action="#" class="avn-form">
+  <form method="GET" action="#" class="avn-form">
 
-        <h3>Label + Input</h3>
-        <label for="radio1-1">Radio 1</label><input type="radio" id="radio1-1" name="radio1" checked="checked" />
-        <label for="radio1-2">Radio 2</label><input type="radio" id="radio1-2" name="radio1" />
-        <label for="radio1-3">Radio 3</label><input type="radio" id="radio1-3" name="radio1" /><br />
+    <h3>Label + Input</h3>
+    <label for="radio1-1">Radio 1</label><input type="radio" id="radio1-1" name="radio1" checked="checked" />
+    <label for="radio1-2">Radio 2</label><input type="radio" id="radio1-2" name="radio1" />
+    <label for="radio1-3">Radio 3</label><input type="radio" id="radio1-3" name="radio1" /><br />
 
-        <h3>Label &gt; Input</h3>
-        <label>Radio 1<input type="radio" name="radio2" checked="checked" /></label>
-        <label>Radio 2<input type="radio" name="radio2" /></label>
-        <label>Radio 3<input type="radio" name="radio2" /></label><br />
+    <h3>Label &gt; Input</h3>
+    <label>Radio 1<input type="radio" name="radio2" checked="checked" /></label>
+    <label>Radio 2<input type="radio" name="radio2" /></label>
+    <label>Radio 3<input type="radio" name="radio2" /></label><br />
 
-        <h3>Label + Input + br</h3>
-        <label for="radio3-1">Radio 1</label><input type="radio" id="radio3-1" name="radio3" checked="checked" /><br />
-        <label for="radio3-2">Radio 2</label><input type="radio" id="radio3-2" name="radio3" /><br />
-        <label for="radio3-3">Radio 3</label><input type="radio" id="radio3-3" name="radio3" /><br />
+    <h3>Label + Input + br</h3>
+    <label for="radio3-1">Radio 1</label><input type="radio" id="radio3-1" name="radio3" checked="checked" /><br />
+    <label for="radio3-2">Radio 2</label><input type="radio" id="radio3-2" name="radio3" /><br />
+    <label for="radio3-3">Radio 3</label><input type="radio" id="radio3-3" name="radio3" /><br />
 
-        <h3>(Label &gt; Input) + br</h3>
-        <label>Radio 1<input type="radio" name="radio4" checked="checked" /></label><br />
-        <label>Radio 2<input type="radio" name="radio4" /></label><br />
-        <label>Radio 3<input type="radio" name="radio4" /></label>
+    <h3>(Label &gt; Input) + br</h3>
+    <label>Radio 1<input type="radio" name="radio4" checked="checked" /></label><br />
+    <label>Radio 2<input type="radio" name="radio4" /></label><br />
+    <label>Radio 3<input type="radio" name="radio4" /></label>
 
-        <hr />
+    <hr />
 
-        <h3>Input + Label</h3>
-        <input type="radio" id="radio5-1" name="radio5" checked="checked" /><label for="radio5-1">Radio 1</label>
-        <input type="radio" id="radio5-2" name="radio5" /><label for="radio5-2">Radio 2</label>
-        <input type="radio" id="radio5-3" name="radio5" /><label for="radio5-3">Radio 3</label><br />
+    <h3>Input + Label</h3>
+    <input type="radio" id="radio5-1" name="radio5" checked="checked" /><label for="radio5-1">Radio 1</label>
+    <input type="radio" id="radio5-2" name="radio5" /><label for="radio5-2">Radio 2</label>
+    <input type="radio" id="radio5-3" name="radio5" /><label for="radio5-3">Radio 3</label><br />
 
-        <h3>Label &gt; Input</h3>
-        <label class="avn-form-nested-inverted"><input type="radio" name="radio6" checked="checked" />Radio 1</label>
-        <label class="avn-form-nested-inverted"><input type="radio" name="radio6" />Radio 2</label>
-        <label class="avn-form-nested-inverted"><input type="radio" name="radio6" />Radio 3</label><br />
+    <h3>Label &gt; Input</h3>
+    <label class="avn-form-nested-inverted"><input type="radio" name="radio6" checked="checked" />Radio 1</label>
+    <label class="avn-form-nested-inverted"><input type="radio" name="radio6" />Radio 2</label>
+    <label class="avn-form-nested-inverted"><input type="radio" name="radio6" />Radio 3</label><br />
 
-        <h3>Input + Label + br</h3>
-        <input type="radio" id="radio7-1" name="radio7" checked="checked" /><label for="radio7-1">Radio 1</label><br />
-        <input type="radio" id="radio7-2" name="radio7" /><label for="radio7-2">Radio 2</label><br />
-        <input type="radio" id="radio7-3" name="radio7" /><label for="radio7-3">Radio 3</label><br />
+    <h3>Input + Label + br</h3>
+    <input type="radio" id="radio7-1" name="radio7" checked="checked" /><label for="radio7-1">Radio 1</label><br />
+    <input type="radio" id="radio7-2" name="radio7" /><label for="radio7-2">Radio 2</label><br />
+    <input type="radio" id="radio7-3" name="radio7" /><label for="radio7-3">Radio 3</label><br />
 
-        <h3>(Label &gt; Input) + br</h3>
-        <label class="avn-form-nested-inverted"><input type="radio" name="radio8" checked="checked" />Radio 1</label><br />
-        <label class="avn-form-nested-inverted"><input type="radio" name="radio8" />Radio 2</label><br />
-        <label class="avn-form-nested-inverted"><input type="radio" name="radio8" />Radio 3</label>
+    <h3>(Label &gt; Input) + br</h3>
+    <label class="avn-form-nested-inverted"><input type="radio" name="radio8" checked="checked" />Radio 1</label><br />
+    <label class="avn-form-nested-inverted"><input type="radio" name="radio8" />Radio 2</label><br />
+    <label class="avn-form-nested-inverted"><input type="radio" name="radio8" />Radio 3</label>
 
-    </form>
+  </form>
 
 </div>
 
