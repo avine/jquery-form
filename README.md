@@ -1,6 +1,6 @@
 # jQueryForm
 
-Advanced jQuery UI Form Widgets
+Advanced jQuery Form - UI Widgets
 
 Replace a list of radio (or checkbox) buttons by an full featured button group or even a tree view!
 
