@@ -1,0 +1,30 @@
+{
+  "name": "jquery-form",
+  "version": "1.0.0",
+  "description": "Advanced jQuery UI Form Widgets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precopy:jquery": "shx mkdir -p vendors/jquery",
+    "copy:jquery": "shx cp node_modules/jquery/dist/jquery.min.js vendors/jquery",
+    "precopy:fa": "shx mkdir -p vendors/font-awesome/css",
+    "copy:fa": "shx cp node_modules/font-awesome/css/font-awesome.min.css vendors/font-awesome/css && cp -r node_modules/font-awesome/fonts vendors/font-awesome",
+    "precopy": "shx rm -rf vendors",
+    "copy": "npm run copy:jquery && npm run copy:fa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avine/jquery-form.git"
+  },
+  "author": "Stéphane Francel <contact@avine.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avine/jquery-form/issues"
+  },
+  "homepage": "https://github.com/avine/jquery-form#readme",
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "shx": "^0.3.2"
+  }
+}
