@@ -24,7 +24,7 @@
   "homepage": "https://github.com/avine/jquery-form#readme",
   "devDependencies": {
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "shx": "^0.3.2"
   }
 }
